@@ -26,7 +26,7 @@ describe('e2e test for purchase on saucedemo site', () => {
 
   it('Add a product to the cart and finalize the purchase', () => {
     // login
-    loginpage.enterUsername('standard_user')
+    loginpage.enterUsername('standard_use')
     loginpage.enterPassword('secret_sauce')
     loginpage.clickLogin()
     loginpage.validatetitle()
