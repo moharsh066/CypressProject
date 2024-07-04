@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-04T10:35:39.857Z",
+    "end": "2024-07-04T10:35:54.801Z",
+    "duration": 14944,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b39c6ce8-819c-466c-9b2d-b6f1ca36527f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\test_execute.cy.ts",
+      "file": "cypress\\e2e\\test_execute.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "94bc52cb-17b7-49f1-9391-cd4fc487ca57",
+          "title": "e2e test for purchase on saucedemo site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add a product to the cart and finalize the purchase",
+              "fullTitle": "e2e test for purchase on saucedemo site Add a product to the cart and finalize the purchase",
+              "timedOut": null,
+              "duration": 13118,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\test_execute.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\test_execute.cy.ts\\\\e2e test for purchase on saucedemo site -- Add a product to the cart and finalize the purchase (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "// login\nloginpage.enterUsername('standard_use');\nloginpage.enterPassword('secret_sauce');\nloginpage.clickLogin();\n// add product to cart\nproductpage.clicksaucelabbackpack();\nproductpage.clickaddtocart();\nproductpage.clickgotocart();\n// click Checkout \ncartpage.clickCheckout();\n// fill and clcik continue on the checkout page\ncheckoutpage.enterFirstname(\"Julian\");\ncheckoutpage.enterLastname(\"Elisa\");\ncheckoutpage.enterPostalcode(\"93555\");\ncheckoutpage.clickonContinue();\n//validate the product and click finsh on Checkout Overview page\ncheckoutoverviewPage.clickfinish();\n//Verify the purchase \nchekcoutcompletePage.validateConfirmation();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-test=\"item-4-title-link\"] > [data-test=\"inventory-item-name\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-test=\"item-4-title-link\"] > [data-test=\"inventory-item-name\"]`, but never found it.\n    at ProductPage.clicksaucelabbackpack (webpack://cypresssaucedempproject/./cypress/e2e/pages/productPage.ts:11:0)\n    at Context.eval (webpack://cypresssaucedempproject/./cypress/e2e/test_execute.cy.ts:28:0)",
+                "diff": null
+              },
+              "uuid": "48fd11d8-3402-4135-840a-65014226d9c6",
+              "parentUUID": "94bc52cb-17b7-49f1-9391-cd4fc487ca57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "48fd11d8-3402-4135-840a-65014226d9c6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 13118,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

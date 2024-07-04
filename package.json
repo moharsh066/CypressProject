@@ -1,0 +1,26 @@
+{
+  "name": "cypresssaucedempproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "browser-testing": "npx cypress run --headed -s cypress/e2e -b chrome && npx cypress run --headed -s cypress/e2e -b edge ",
+    "chrome-execution": "npx cypress run --headed -s cypress/e2e -b chrome",
+    "edge-execution": "npx cypress run --headed -s cypress/e2e -b edge"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^13.13.0",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-xpath": "^2.0.1"
+  }
+}
