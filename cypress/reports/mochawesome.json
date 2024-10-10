@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-07-04T10:35:39.857Z",
-    "end": "2024-07-04T10:35:54.801Z",
-    "duration": 14944,
+    "failures": 0,
+    "start": "2024-09-07T05:40:41.650Z",
+    "end": "2024-09-07T05:41:08.121Z",
+    "duration": 26471,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b39c6ce8-819c-466c-9b2d-b6f1ca36527f",
+      "uuid": "fd391794-d976-4f9b-94e0-57b58b6bdd96",
       "title": "",
       "fullFile": "cypress\\e2e\\test_execute.cy.ts",
       "file": "cypress\\e2e\\test_execute.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "94bc52cb-17b7-49f1-9391-cd4fc487ca57",
+          "uuid": "c5b7d816-000f-49a8-ba10-706d5ad6b75e",
           "title": "e2e test for purchase on saucedemo site",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Add a product to the cart and finalize the purchase",
               "fullTitle": "e2e test for purchase on saucedemo site Add a product to the cart and finalize the purchase",
               "timedOut": null,
-              "duration": 13118,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 24645,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\test_execute.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\test_execute.cy.ts\\\\e2e test for purchase on saucedemo site -- Add a product to the cart and finalize the purchase (failed).png\"\n      ]\n    ]\n  }\n]",
-              "code": "// login\nloginpage.enterUsername('standard_use');\nloginpage.enterPassword('secret_sauce');\nloginpage.clickLogin();\n// add product to cart\nproductpage.clicksaucelabbackpack();\nproductpage.clickaddtocart();\nproductpage.clickgotocart();\n// click Checkout \ncartpage.clickCheckout();\n// fill and clcik continue on the checkout page\ncheckoutpage.enterFirstname(\"Julian\");\ncheckoutpage.enterLastname(\"Elisa\");\ncheckoutpage.enterPostalcode(\"93555\");\ncheckoutpage.clickonContinue();\n//validate the product and click finsh on Checkout Overview page\ncheckoutoverviewPage.clickfinish();\n//Verify the purchase \nchekcoutcompletePage.validateConfirmation();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-test=\"item-4-title-link\"] > [data-test=\"inventory-item-name\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `[data-test=\"item-4-title-link\"] > [data-test=\"inventory-item-name\"]`, but never found it.\n    at ProductPage.clicksaucelabbackpack (webpack://cypresssaucedempproject/./cypress/e2e/pages/productPage.ts:11:0)\n    at Context.eval (webpack://cypresssaucedempproject/./cypress/e2e/test_execute.cy.ts:28:0)",
-                "diff": null
-              },
-              "uuid": "48fd11d8-3402-4135-840a-65014226d9c6",
-              "parentUUID": "94bc52cb-17b7-49f1-9391-cd4fc487ca57",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\test_execute.cy.ts\"\n}",
+              "code": "// login\nloginpage.enterUsername('standard_user');\nloginpage.enterPassword('secret_sauce');\nloginpage.clickLogin();\nloginpage.validatetitle();\n// add product to cart\nproductpage.clicksaucelabbackpack();\nproductpage.clickaddtocart();\nproductpage.clickgotocart();\n// // click Checkout \ncartpage.clickCheckout();\n// // fill and clcik continue on the checkout page\ncheckoutpage.enterFirstname(\"Julian\");\ncheckoutpage.enterLastname(\"Elisa\");\ncheckoutpage.enterPostalcode(\"93555\");\ncheckoutpage.clickonContinue();\n// //validate the product and click finsh on Checkout Overview page\ncheckoutoverviewPage.clickfinish();\n// //Verify the purchase \nchekcoutcompletePage.validateConfirmation();",
+              "err": {},
+              "uuid": "523bb23b-8354-4e0d-8eac-e791c88efd5b",
+              "parentUUID": "c5b7d816-000f-49a8-ba10-706d5ad6b75e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "48fd11d8-3402-4135-840a-65014226d9c6"
+          "passes": [
+            "523bb23b-8354-4e0d-8eac-e791c88efd5b"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13118,
+          "duration": 24645,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
