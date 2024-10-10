@@ -18,7 +18,7 @@ beforeEach(function () {
   cy.clearAllCookies()
   cy.clearLocalStorage()
   cy.clearAllSessionStorage()
-  cy.visit('www.saucedemo.com')
+  cy.visit('/')
 })
 
 describe('e2e test for purchase on saucedemo site', () => {
@@ -26,8 +26,9 @@ describe('e2e test for purchase on saucedemo site', () => {
 
   it('Add a product to the cart and finalize the purchase', () => {
     // login
-    loginpage.enterUsername('standard_user')
-    loginpage.enterPassword('secret_sauce')
+   // loginpage.enterUsername('standard_user')
+    loginpage.enterUsername()
+    loginpage.enterPassword()
     loginpage.clickLogin()
     loginpage.validatetitle()
 
@@ -56,6 +57,7 @@ describe('e2e test for purchase on saucedemo site', () => {
 afterEach(function () {
   cy.clearCookies()
   cy.clearLocalStorage()
+  
 
 })
 

@@ -1,0 +1,12 @@
+{
+    "username_textbox" : "//input[@id = 'user-name']",
+    "password_textbox" : "//input[@name='password']",
+    "login_button" : "//input[@type='submit']",
+    "title" : "[data-test='title']",
+    
+    "username_standard" : "standard_user",
+    "password": "secret_sauce"
+
+
+
+}

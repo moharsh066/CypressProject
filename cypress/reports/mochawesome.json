@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-09-07T05:40:41.650Z",
-    "end": "2024-09-07T05:41:08.121Z",
-    "duration": 26471,
+    "failures": 1,
+    "start": "2024-10-10T15:43:34.166Z",
+    "end": "2024-10-10T15:43:35.845Z",
+    "duration": 1679,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fd391794-d976-4f9b-94e0-57b58b6bdd96",
+      "uuid": "4bbb7379-053b-4485-a3b1-69dc8b2ce0b0",
       "title": "",
       "fullFile": "cypress\\e2e\\test_execute.cy.ts",
       "file": "cypress\\e2e\\test_execute.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c5b7d816-000f-49a8-ba10-706d5ad6b75e",
+          "uuid": "e179d2a0-2ad3-498e-8f9c-2bec898cbe7a",
           "title": "e2e test for purchase on saucedemo site",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Add a product to the cart and finalize the purchase",
               "fullTitle": "e2e test for purchase on saucedemo site Add a product to the cart and finalize the purchase",
               "timedOut": null,
-              "duration": 24645,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 1614,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\test_execute.cy.ts\"\n}",
-              "code": "// login\nloginpage.enterUsername('standard_user');\nloginpage.enterPassword('secret_sauce');\nloginpage.clickLogin();\nloginpage.validatetitle();\n// add product to cart\nproductpage.clicksaucelabbackpack();\nproductpage.clickaddtocart();\nproductpage.clickgotocart();\n// // click Checkout \ncartpage.clickCheckout();\n// // fill and clcik continue on the checkout page\ncheckoutpage.enterFirstname(\"Julian\");\ncheckoutpage.enterLastname(\"Elisa\");\ncheckoutpage.enterPostalcode(\"93555\");\ncheckoutpage.clickonContinue();\n// //validate the product and click finsh on Checkout Overview page\ncheckoutoverviewPage.clickfinish();\n// //Verify the purchase \nchekcoutcompletePage.validateConfirmation();",
-              "err": {},
-              "uuid": "523bb23b-8354-4e0d-8eac-e791c88efd5b",
-              "parentUUID": "c5b7d816-000f-49a8-ba10-706d5ad6b75e",
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\test_execute.cy.ts\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\test_execute.cy.ts\\\\e2e test for purchase on saucedemo site -- Add a product to the cart and finalize the purchase (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "// login\n// loginpage.enterUsername('standard_user')\nloginpage.enterUsername();\nloginpage.enterPassword();\nloginpage.clickLogin();\nloginpage.validatetitle();\n// add product to cart\nproductpage.clicksaucelabbackpack();\nproductpage.clickaddtocart();\nproductpage.clickgotocart();\n// // click Checkout \ncartpage.clickCheckout();\n// // fill and clcik continue on the checkout page\ncheckoutpage.enterFirstname(\"Julian\");\ncheckoutpage.enterLastname(\"Elisa\");\ncheckoutpage.enterPostalcode(\"93555\");\ncheckoutpage.clickonContinue();\n// //validate the product and click finsh on Checkout Overview page\ncheckoutoverviewPage.clickfinish();\n// //Verify the purchase \nchekcoutcompletePage.validateConfirmation();",
+              "err": {
+                "message": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type",
+                "estack": "CypressError: `cy.type()` can only accept a string or number. You passed in: `undefined`\n\nhttps://on.cypress.io/type\n    at Context.type (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:114910:68)\n    at wrapped (https://www.saucedemo.com/__cypress/runner/cypress_runner.js:137994:19)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypresssaucedempproject/./cypress/e2e/pages/loginPage.ts:14:0)",
+                "diff": null
+              },
+              "uuid": "695b1fce-f84b-4588-b70f-8ccc815a734a",
+              "parentUUID": "e179d2a0-2ad3-498e-8f9c-2bec898cbe7a",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "523bb23b-8354-4e0d-8eac-e791c88efd5b"
+          "passes": [],
+          "failures": [
+            "695b1fce-f84b-4588-b70f-8ccc815a734a"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 24645,
+          "duration": 1614,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

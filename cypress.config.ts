@@ -10,8 +10,9 @@ export default defineConfig({
     charts: true
   },
   e2e: {
+    baseUrl:"https://www.saucedemo.com",
     watchForFileChanges: false,
-    defaultCommandTimeout: 5000,
+    defaultCommandTimeout: 10000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
